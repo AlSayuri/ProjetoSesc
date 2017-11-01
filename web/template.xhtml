@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>SESC</title>
+    </h:head>
+    <h:body>
+        <p:layout fullPage="true">
+            <p:layoutUnit position="north" size="80">
+                <img src="../img/sistema.jpg" width="70" height="60"/>
+                <h:outputText value="Cadastro SESC" />
+            </p:layoutUnit>
+            <p:layoutUnit position="south" size="60">
+                <h:outputText value="Site de Cadastro do SESC" />
+            </p:layoutUnit>
+            <p:layoutUnit position="west" size="250">
+                <h:form>
+                    <p:menu style="width:220px">
+                        <p:submenu label="Menu De Opções">
+                            <p:menuitem value="Cadastrar" icon="ui-icon-pencil" url="/faces/IncluirCadastro.xhtml"/>
+                            <p:menuitem value="Listagem de Pessoas" icon="ui-icon-bookmark" url="/faces/ListPrimeiro.xhtml"/>
+                            <p:menuitem value="Exclusão de Cadastro" icon="ui-icon-trash" url="/faces/ExcPrimeiro.xhtml"/>
+                            <p:menuitem value="Alteração de Cadastro" icon="ui-icon-wrench" url="/faces/AltPrimeiro.xhtml"/>
+                        </p:submenu>
+                    </p:menu>
+                </h:form>
+            </p:layoutUnit>
+            <p:layoutUnit position="center">
+                <ui:insert name="funcoes">
+                    <h:outputText value="" />
+                </ui:insert>
+            </p:layoutUnit>
+        </p:layout>
+    </h:body>
+</html>
+

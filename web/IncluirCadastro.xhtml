@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./template.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+
+    <ui:define name="funcoes">
+        <p:panel header="Cadastro De Usuario">
+
+            <h:form id="frmInc">
+                <p:growl id="msgs" showDetail="true"/>  
+                <p:panelGrid id="pngInc" columns="2" style="margin:0 auto;">  
+                    <p:column>
+                        <h:outputText value="Data De Nascimento:" />  
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="dta_nasc" value="#{incluirCadastroMB.cadastro.dtaNasc}" size="50" required="true" requiredMessage="Data de Nascimento é um campo obrigatório!"/>  
+                    </p:column>
+                    <p:column>
+                        <h:outputText value="Sexo:" />  
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="sexo" value="#{incluirCadastroMB.cadastro.sexo}" size="5" required="true" requiredMessage="Sexo é um campo obrigatório!"/>  
+                    </p:column>
+                    <p:column>
+                        <h:outputText value=" Estado Civil:" />  
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="Estado_civil" value="#{incluirCadastroMB.cadastro.estadoCivil}" size="10" required="true" requiredMessage="Estado Civil é um campo obrigatório!"/>  
+                    </p:column>
+                    <p:column>
+                        <h:outputText value="CEP:" />  
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="cep" value="#{incluirCadastroMB.cadastro.cep}" size="10" required="true" requiredMessage="CEP é um campo obrigatório!"/>  
+                    </p:column>
+                    <p:column>
+                        <h:outputText value="Habilitação:" />  
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="habilitacao" value="#{incluirCadastroMB.cadastro.habilitacao}" size="50"/>  
+                    </p:column>
+                    <p:column>
+                        <h:outputText value="Nome do Pai:" />  
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="nme_pai" value="#{incluirCadastroMB.cadastro.nmePai}" size="50"/>  
+                    </p:column>
+                    <p:column>
+                        <h:outputText value="Nome da Mãe:" />  
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="nme_mae" value="#{incluirCadastroMB.cadastro.nmeMae}" size="50"/>  
+                    </p:column>
+                    <p:column>
+                        <h:outputText value="RG:" />  
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="rg" value="#{incluirCadastroMB.cadastro.rg}" size="10" required="true" requiredMessage="RG é um campo obrigatório!"/>  
+                    </p:column>
+                    <p:column>
+                        <h:outputText value="Orgão Emissor:" />  
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="orgao_emissor" value="#{incluirCadastroMB.cadastro.orgaoEmissor}" size="10" required="true" requiredMessage="Orgão Emissor é um campo obrigatório!"/>  
+                    </p:column>
+                    <p:column>
+                        <h:outputText value="Naturalidade:" />  
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="naturalidade" value="#{incluirCadastroMB.cadastro.naturalidade}" size="50" required="true" requiredMessage="Naturalidade é um campo obrigatório!"/>  
+                    </p:column>
+                    <p:column>
+                        <h:outputText value="Nacionalidade:" />  
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="nacionalidade" value="#{incluirCadastroMB.cadastro.nacionalidade}" size="50" required="true" requiredMessage="Nacionalidade é um campo obrigatório!"/>  
+                    </p:column>
+                    <p:column>
+                        <h:outputText value="Profissão:" />  
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="profissao" value="#{incluirCadastroMB.cadastro.profissao}" size="20" required="true" requiredMessage="Profissão é um campo obrigatório!"/>  
+                    </p:column>
+                    <p:column>
+                        <h:outputText value="Renda Mensal:" />  
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="renda_mensal" value="#{incluirCadastroMB.cadastro.rendaMensal}" size="10" required="true" requiredMessage="Renda Mensal é um campo obrigatório!"/>  
+                    </p:column>
+                    <p:column>
+                        <h:outputText value="Grau de Instrução:" />  
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="grau_instrucao" value="#{incluirCadastroMB.cadastro.grauInstrucao}" size="50" required="true" requiredMessage="Grau de Instrução é um campo obrigatório!"/>  
+                    </p:column>
+                    <p:column>
+                        <h:outputText value="Telefone (Celular):" />  
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="tel_celular" value="#{incluirCadastroMB.cadastro.telCelular}" size="10" required="true" requiredMessage="Telefone Celular é um campo obrigatório!"/>  
+                    </p:column>
+                    <p:column>
+                        <h:outputText value="Telefone (Residencial):" />  
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="tel_residencial" value="#{incluirCadastroMB.cadastro.telResidencial}" size="10" required="true" requiredMessage="Telefone Residencial é um campo obrigatório!"/>  
+                    </p:column>
+                    <p:column>
+                        <h:outputText value="Telefone (Comercial):" />  
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="tel_comercial" value="#{incluirCadastroMB.cadastro.telComercial}" size="10" required="true" requiredMessage="Telefone Comercial é um campo obrigatório!"/>  
+                    </p:column>
+                    <p:column>
+                        <h:outputText value="Tipo de Associação" />  
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="tipo_associacao" value="#{incluirCadastroMB.cadastro.tipoAssociacao}" size="10"/>  
+                    </p:column>
+                    
+                    <p:column>
+                        <p:commandButton id="btnIncluir" update=":frmInc:pngInc, :frmConsulta:dtbConsulta, :frmInc:msgs" icon="ui-icon-disk" value="Incluir"  actionListener="#{incluirCadastroMB.incluir()}" ajax="true"/>  
+                    </p:column>
+                    <p:column>
+
+                    </p:column>
+                </p:panelGrid>  
+            </h:form>
+
+            <h:form id="frmConsulta">  
+                <p:dataTable id="dtbConsulta" var="reg" value="#{incluirCadastroMB.lista}" tableStyle="width:auto;" paginator="true" rows="5">  
+                    <p:column headerText="Identificador" style="width:100px">  
+                        <h:outputText value="#{reg.idtPreCadastro}" />  
+                    </p:column>  
+                    <p:column headerText="Data de Nascimento" style="width:300px">  
+                        <h:outputText value="#{reg.dtaNasc}" />  
+                    </p:column>  
+                    <p:column headerText="Sexo" style="width:100px">  
+                        <h:outputText value="#{reg.sexo}" />  
+                    </p:column>  
+                    <p:column headerText="Estado Civil" style="width:100px">  
+                        <h:outputText value="#{reg.estadoCivil}" />  
+                    </p:column>  
+                    <p:column headerText="CEP" style="width:100px">  
+                        <h:outputText value="#{reg.cep}" />  
+                    </p:column>
+                    <p:column headerText="Habilitação" style="width:100px">  
+                        <h:outputText value="#{reg.habilitacao}" />  
+                    </p:column>
+                    <p:column headerText="Nome do Pai" style="width:300px">  
+                        <h:outputText value="#{reg.nmePai}" />  
+                    </p:column>
+                    <p:column headerText="Nome da Mãe" style="width:300px">  
+                        <h:outputText value="#{reg.nmeMae}" />  
+                    </p:column>
+                    <p:column headerText="RG" style="width:100px">  
+                        <h:outputText value="#{reg.rg}" />  
+                    </p:column>
+                    <p:column headerText="Orgão Emissor" style="width:100px">  
+                        <h:outputText value="#{reg.orgaoEmissor}" />  
+                    </p:column>
+                    <p:column headerText="Naturalidade" style="width:300px">  
+                        <h:outputText value="#{reg.naturalidade}" />  
+                    </p:column>
+                    <p:column headerText="Nacionalidade" style="width:300px">  
+                        <h:outputText value="#{reg.nacionalidade}" />  
+                    </p:column>
+                    <p:column headerText="Profissão" style="width:300px">  
+                        <h:outputText value="#{reg.profissao}" />  
+                    </p:column>
+                    <p:column headerText="Renda Mensal" style="width:100px">  
+                        <h:outputText value="#{reg.rendaMensal}" />  
+                    </p:column>
+                    <p:column headerText="Grau de Instrução" style="width:100px">  
+                        <h:outputText value="#{reg.grauInstrucao}" />  
+                    </p:column>
+                    <p:column headerText="Telefone Celular" style="width:100px">  
+                        <h:outputText value="#{reg.telCelular}" />  
+                    </p:column>
+                    <p:column headerText="Telefone Residencial" style="width:100px">  
+                        <h:outputText value="#{reg.telResidencial}" />  
+                    </p:column>
+                    <p:column headerText="Telefone Comercial" style="width:100px">  
+                        <h:outputText value="#{reg.telComercial}" />  
+                    </p:column>
+                    <p:column headerText="Tipo de Associação" style="width:100px">  
+                        <h:outputText value="#{reg.tipoAssociacao}" />  
+                    </p:column>
+                </p:dataTable>  
+            </h:form> 
+
+        </p:panel>
+    </ui:define>
+
+</ui:composition>
